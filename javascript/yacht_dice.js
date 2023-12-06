@@ -1,3 +1,11 @@
+/*
+Yacht Dice 스크립트 파일입니다.
+imgs파일을 통째로 다운받아야 이미지가 제대로 출력됩니다.
+경로 = imgs/dice_0.jpg
+턴당 주사위 굴리는 횟수는 3회가 제한입니다.
+변경하고 싶으시면 rollcnt값을 수정해주세요.
+*/
+
 function dw(str){
     document.write(str);
 }
@@ -10,7 +18,7 @@ let throw_dice;
 let dice_rolled;
 let rolled = new Array;
 let r = new Array(5);
-let rollcnt = 999999;
+let rollcnt = 3;
 
 let dice_selected;
 let selected = new Array;
