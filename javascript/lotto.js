@@ -28,23 +28,27 @@ function onClick() {
     
     for (i = 1; i <= 7;) {
         let tmp = Math.floor(Math.random()*45+1);
-        if (!lotto[tmp]) {
+
+        if (!lotto[tmp]) { 
             win[i] = tmp;
             if (i == 7) {
-                lotto[tmp] += 2;
+                lotto[tmp] += 3;
                 break;
             }
             lotto[tmp]++;
-            lotto[usernum[i]]++;
             i++;
         }
+    }
+
+    for (i = 1; i <= 7; i++) {
+        lotto[usernum[i]]++;
     }
     
     let corrcnt = 0;
     let bonusf = false;
     for (i = 1; i <= 45; i++) {
         if(lotto[i] == 2) corrcnt++;
-        if(lotto[i] == 3) bonusf = true;
+        if(lotto[i] == 4) bonusf = true;
     }
 
     switch (corrcnt) {
