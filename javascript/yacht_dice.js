@@ -264,7 +264,7 @@ function resetDiceBoard() {
     rolled.length = 0;
     selected.length = 0;
 
-    rollcnt = 999999;
+    rollcnt = 3;
 
     if (isend) {
         /*
